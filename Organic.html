@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>HOD Desk</title>
+    <title>Staff</title>
     <meta charset="utf-8" />
     <meta
       name="viewport"
@@ -18,111 +18,8 @@
     />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      .curriculum-card {
-        background: #fff;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-        margin: 40px auto;
-        max-width: 1100px;
-      }
-
-      .curriculum-header {
-        background: linear-gradient(135deg, #7b2ff7, #5b18d6);
-
-        color: white;
-
-        font-size: 36px;
-
-        font-weight: 700;
-
-        text-align: center;
-
-        padding: 30px;
-      }
-
-      .semester-tabs {
-        display: flex;
-
-        justify-content: space-between;
-
-        background: #24364c;
-
-        padding: 0;
-      }
-
-      .semester-tabs button {
-        flex: 1;
-        min-width: 120px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        border: none;
-        background: none;
-        color: #fff;
-        font-size: 17px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        padding: 18px 15px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
-
-      .semester-tabs button:hover {
-        background: #324963;
-      }
-
-      .semester-tabs .active {
-        background: #324963;
-      }
-
-      .curriculum-content {
-        display: grid;
-
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-
-        gap: 25px;
-
-        padding: 35px;
-      }
-
-      .pdf-card {
-        text-decoration: none;
-
-        background: #fff;
-
-        border-radius: 12px;
-
-        padding: 25px;
-
-        text-align: center;
-
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-
-        transition: 0.3s;
-
-        color: #333;
-      }
-
-      .pdf-card:hover {
-        transform: translateY(-6px);
-      }
-
-      .pdf-card i {
-        color: #d32f2f;
-
-        font-size: 42px;
-
-        margin-bottom: 10px;
-      }
-
-      .pdf-card span {
-        display: block;
-
-        font-weight: 600;
-
-        font-size: 18px;
+      #header {
+        height: 13em !important;
       }
       nav {
         background-color: white;
@@ -154,30 +51,37 @@
         align-items: center;
         padding: 0 1em;
       }
+
+      .highlight h3,
+      .highlight p {
+        margin-bottom: 0px;
+      }
       #footer .feature-list .row {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      }
 
-#footer .feature-list .row > div {
-    width: 24%;
-    flex: 0 0 24%;
-}
+      #footer .feature-list .row > div {
+        width: 24%;
+        flex: 0 0 24%;
+      }
 
-#footer .feature-list section {
-    margin-bottom: 0;
-}
+      #footer .feature-list section {
+        margin-bottom: 0;
+      }
     </style>
   </head>
 
   <body class="no-sidebar is-preload">
     <div id="page-wrapper">
       <!-- Header -->
-      <!-- <section id="header" class="wrapper"> -->
-        <!-- <div id="logo">
-          <h1><a href="index.html">Bs-Ms Major in Chemistry</a></h1>
-        </div> -->
+      <section id="header" class="wrapper">
+        <!-- Logo -->
+        <div id="logo">
+          <!-- <h1><a href="index.html">Staff</a></h1>
+          <p>Consists of 2 staff in Chemistry Department</p> -->
+        </div>
 
         <!-- Nav -->
         <nav
@@ -214,7 +118,7 @@
               <a href="#" style="color: black; font-weight: bold">About Us</a
               ><i class="fa-solid fa-chevron-down"></i>
               <ul>
-                <li><a href="hod.html">From HOD's Desk</a></li>
+                <li><a href="./hod.html">From HOD's Desk</a></li>
                 <li>
                   <a href="./gallery.html">Gallery</a>
                 </li>
@@ -234,7 +138,7 @@
                   </ul>
                 </li>
 
-                <li><a href="./staff.html">Staff</a></li>
+                <li><a href="staff.html">Staff</a></li>
               </ul>
             </li>
             <li>
@@ -244,11 +148,27 @@
                 <li>
                   <a href="#">Overview</a>
                   <ul>
-                    <li><a href="./Bioorganic.html">Bioorganic Chemistry and Chemical Biology</a></li>
-                    <li><a href="./Organometallics.html">Organometallics and Catalysis</a></li>
+                    <li>
+                      <a href="./Bioorganic.html"
+                        >Bioorganic Chemistry and Chemical Biology</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./Organometallics.html"
+                        >Organometallics and Catalysis</a
+                      >
+                    </li>
                     <li><a href="./Organic.html">Organic Chemistry</a></li>
-                    <li><a href="./Theoretical.html">Theoretical and Computational Chemistry</a></li>
-                    <li><a href="./Pi-conjugated.html">Pi-conjugated Organic chemistry </a></li>
+                    <li>
+                      <a href="./Theoretical.html"
+                        >Theoretical and Computational Chemistry</a
+                      >
+                    </li>
+                    <li>
+                      <a href="./Pi-conjugated.html"
+                        >Pi-conjugated Organic chemistry
+                      </a>
+                    </li>
                   </ul>
                 </li>
                 <li>
@@ -271,7 +191,7 @@
               <a href="#" style="color: black; font-weight: bold">Academics</a
               ><i class="fa-solid fa-chevron-down"></i>
               <ul>
-                <li><a href="undergraduate.html">Undergraduate</a></li>
+                <li><a href="./undergraduate.html">Undergraduate</a></li>
                 <li><a href="./postgraduate.html">Postgratuate</a></li>
                 <li><a href="#">Doctoral</a></li>
               </ul>
@@ -290,82 +210,32 @@
         </nav>
       </section>
 
-      <!-- Main -->
-      <div id="main" class="wrapper style2">
-        <div class="title">BS-MS Major in Chemistry</div>
-        <div class="container">
-          <!-- Content -->
-          <div id="content">
-            <div class="curriculum-card">
-              <div class="curriculum-header">
-                 MSc in Chemistry Curriculum
-              </div>
-
-              <!-- <div class="semester-tabs">
-                <button class="active">I SEM</button>
-                <button>II SEM</button>
-                <button>III SEM</button>
-                <button>IV SEM</button>
-                <button>V SEM</button>
-                <button>VI SEM</button>
-                <button>VII SEM</button>
-                <button>VIII SEM</button>
-              </div> -->
-
-              <div class="curriculum-content">
-                <a href="./curriculum/M.Sc Chemistry.pdf" target="_blank" class="pdf-card">
-                  <i class="fas fa-file-pdf"></i>
-                  <span>curriculum</span>
-                </a>
-
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Highlights -->
-      <!-- <section id="highlights" class="wrapper style3">
-            <div class="title">The Endorsements</div>
-            <div class="container">
-                <div class="row aln-center">
-                    <div class="col-4 col-12-medium">
-                        <section class="highlight">
-                            <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-                            <h3><a href="#">Aliquam diam consequat</a></h3>
-                            <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet
-                                vulputate mattis amet laoreet lorem.</p>
-                            <ul class="actions">
-                                <li><a href="#" class="button style1">Learn More</a></li>
-                            </ul>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <section class="highlight">
-                            <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                            <h3><a href="#">Nisl adipiscing sed lorem</a></h3>
-                            <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet
-                                vulputate mattis amet laoreet lorem.</p>
-                            <ul class="actions">
-                                <li><a href="#" class="button style1">Learn More</a></li>
-                            </ul>
-                        </section>
-                    </div>
-                    <div class="col-4 col-12-medium">
-                        <section class="highlight">
-                            <a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-                            <h3><a href="#">Mattis tempus lorem</a></h3>
-                            <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet
-                                vulputate mattis amet laoreet lorem.</p>
-                            <ul class="actions">
-                                <li><a href="#" class="button style1">Learn More</a></li>
-                            </ul>
-                        </section>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+      <section id="highlights" class="wrapper style3">
+        <div class="title" style="color: black">Organic Chemistry</div>
+        <div class="container">
+          <ul style="color: black">
+            <li>Organocatalysis</li>
+            <li>Metal-free organic synthesis</li>
+            <li>Photochemical bond activation for organic synthesis</li>
+            <li>Surrogate chemistry in organic synthesis</li>
+          </ul>
+          <h3 style="color: black">
+            Working faculty :
+            <a
+              href="https://sites.google.com/view/supriyarej/publications?authuser=0"
+              style="color: blue"
+              target="_blank"
+              >Prof. Supriya & </a
+            ><a
+              href="https://sites.google.com/iitdh.ac.in/kundan"
+              style="color: blue"
+              target="_blank"
+              >Prof. Kundan</a
+            >
+          </h3>
+        </div>
+      </section>
 
       <!-- Footer -->
       <section
@@ -410,7 +280,7 @@
                       </p>
                     </section>
                   </div>
-                  <div class="col-3 col-12-medium" style="padding-top: 0px;">
+                  <div class="col-3 col-12-medium" style="padding-top: 0px">
                     <section>
                       <h3 class="icon solid fa-envelope">Email & Phone No.</h3>
                       <p>
@@ -422,9 +292,7 @@
               </section>
             </div>
           </div>
-          <div id="copyright" style="padding-top: 56px; margin-top: 56px">
-            
-          </div>
+          <div id="copyright" style="padding-top: 56px; margin-top: 56px"></div>
         </div>
       </section>
     </div>
