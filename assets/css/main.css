@@ -3106,3 +3106,30 @@ ul.actions.special {
     margin-top: 0;
   }
 }
+/* =========================================
+   Responsive Footer - All Pages
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+  #footer .feature-list .row {
+    display: block !important;
+    width: 100%;
+  }
+
+  #footer .feature-list .col-3 {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-bottom: 35px;
+  }
+
+  #footer .feature-list section {
+    width: 100%;
+  }
+
+  #footer .feature-list p {
+    width: 100%;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+}

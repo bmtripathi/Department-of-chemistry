@@ -1,0 +1,779 @@
+<!doctype html>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+    <title>Staff</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        #header {
+            height: 13em !important;
+        }
+
+        nav {
+            background-color: white;
+        }
+
+        nav a {
+            padding-top: -10px;
+            padding-bottom: -10px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
+        }
+
+        #nav>ul>li>a {
+            font-size: 1em;
+        }
+
+        #nav>ul>li>i {
+            color: black;
+        }
+
+        #nav>ul>li {
+            text-align: center;
+            padding: 0 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 1em;
+        }
+
+        /* =========================================
+   Publications
+   ========================================= */
+
+        .publications-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 60px auto 80px;
+        }
+
+
+        /* ---------- Year Heading ---------- */
+
+        .publication-year {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+            margin: 30px 0 95px;
+
+            color: #263a63;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+        }
+
+        .publication-year::before,
+        .publication-year::after {
+            content: "";
+            height: 2px;
+            background: #263a63;
+            opacity: 0.25;
+            flex: 1;
+        }
+
+        .publication-year span {
+            position: relative;
+
+            padding: 8px 22px;
+
+            background: #263a63;
+            color: white;
+
+            border-radius: 5px;
+
+            white-space: nowrap;
+
+            box-shadow: 0 4px 10px rgba(38, 58, 99, 0.2);
+        }
+
+
+        /* ---------- Grid ---------- */
+
+        .publication-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 30px;
+
+            align-items: stretch;
+        }
+
+
+        /* ---------- Card ---------- */
+
+        .publication-card {
+            background: #fff;
+
+            border-radius: 8px;
+            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+
+            height: 100%;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 10px 28px rgba(0, 0, 0, 0.18);
+        }
+
+
+        /* ---------- Image ---------- */
+
+        .publication-image {
+            width: 100%;
+            height: 210px;
+
+            overflow: hidden;
+
+            background: #f3f3f3;
+
+            flex-shrink: 0;
+        }
+
+        .publication-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            display: block;
+
+            transition: transform 0.4s ease;
+        }
+
+        .publication-card:hover .publication-image img {
+            transform: scale(1.04);
+        }
+
+
+        /* ---------- Card Content ---------- */
+
+        .publication-content {
+            padding: 22px;
+
+            display: flex;
+            flex-direction: column;
+
+            flex: 1;
+        }
+
+
+        /* Title */
+
+        .publication-content h3 {
+            margin: 0 0 15px;
+
+            min-height: 72px;
+
+            font-size: 1.08rem;
+            line-height: 1.45;
+
+            color: #222;
+            font-weight: 700;
+        }
+
+
+        /* Description */
+
+        .publication-content p {
+            margin: 0 0 20px;
+
+            min-height: 75px;
+
+            font-size: 0.92rem;
+            line-height: 1.6;
+
+            color: #666;
+        }
+
+
+        /* DOI */
+
+        .publication-doi {
+            margin-top: auto;
+            margin-bottom: 18px;
+
+            font-size: 0.85rem;
+
+            line-height: 1.5;
+        }
+
+        .publication-doi strong {
+            color: #222;
+        }
+
+        .publication-doi a {
+            color: #e97770;
+
+            word-break: break-word;
+        }
+
+
+        /* ---------- Button ---------- */
+
+        .publication-button {
+            display: block;
+
+            width: 100%;
+
+            padding: 11px 15px;
+
+            background: #e97770;
+            color: #fff !important;
+
+            border-radius: 5px;
+
+            text-align: center;
+
+            font-size: 0.9rem;
+            font-weight: 600;
+
+            text-decoration: none;
+
+            transition: background 0.3s ease;
+        }
+
+        .publication-button:hover {
+            background: #d95f58;
+        }
+
+
+        /* =========================================
+   Tablet
+   ========================================= */
+
+        @media screen and (max-width: 992px) {
+
+            .publication-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+
+        /* =========================================
+   Mobile
+   ========================================= */
+
+        @media screen and (max-width: 600px) {
+
+            .publications-container {
+                width: 90%;
+                margin-top: 40px;
+            }
+
+            .publication-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .publication-year {
+                gap: 12px;
+                margin: 50px 0 25px;
+                font-size: 1.2rem;
+            }
+
+            .publication-image {
+                height: 210px;
+            }
+
+            .publication-year span {
+                padding: 7px 18px;
+            }
+
+            .publication-content {
+                padding: 20px;
+            }
+
+            .publication-content h3 {
+                font-size: 1.05rem;
+                min-height: auto;
+            }
+
+            .publication-content p {
+                min-height: auto;
+            }
+
+        }
+
+        .faculty-profile {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+            border: 1px solid #ddd;
+            background: #fff;
+            margin-bottom: 0;
+            flex-wrap: nowrap;
+        }
+
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .faculty-photo img {
+            width: 250px;
+            /* default size */
+            max-width: 100%;
+            /* prevent overflow */
+            height: auto;
+            border-radius: 5px;
+            margin-right: 20px;
+        }
+
+        .faculty-details {
+            flex: 1;
+            min-width: 250px;
+            /* ensures details don’t shrink too small */
+        }
+
+        .faculty-details h3 {
+            margin: 0 0 10px;
+            color: #e74c3c;
+            font-weight: 1000;
+        }
+
+        .faculty-details p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .faculty-details .button {
+            margin-top: 10px;
+            display: inline-block;
+        }
+
+        .img {
+            border: 10px solid white;
+        }
+
+        /* ✅ Mobile Responsive Fix */
+        @media (max-width: 992px) {
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .faculty-photo img {
+                width: 180px;
+                margin: 0 auto 15px;
+            }
+
+            .faculty-details {
+                text-align: center;
+            }
+        }
+
+        .highlight h3,
+        .highlight p {
+            margin-bottom: 0px;
+        }
+
+        #footer .feature-list .row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+        }
+
+        #footer .feature-list .row>div {
+            width: 24%;
+            flex: 0 0 24%;
+        }
+
+        #footer .feature-list section {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body class="no-sidebar is-preload">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <section id="header" class="wrapper">
+            <!-- Logo -->
+            <div id="logo">
+                <!-- <h1><a href="index.html">Staff</a></h1>
+          <p>Consists of 2 staff in Chemistry Department</p> -->
+            </div>
+
+            <!-- Nav -->
+            <nav id="nav" style="top: 1px; position: fixed; top: 0; width: 100%; z-index: 1000">
+                <ul style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0;
+              padding: 0;
+              list-style: none;
+            ">
+                    <li style="
+                color: black;
+                font-weight: bold;
+                font-size: 2em;
+                margin-right: 160px;
+                padding: 0 0;
+              ">
+                        Department of Chemistry
+                    </li>
+                    <li class="current">
+                        <a href="./index.html" style="color: black; font-weight: bold">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" style="color: black; font-weight: bold">About Us</a><i
+                            class="fa-solid fa-chevron-down"></i>
+                        <ul>
+                            <li><a href="./hod.html">From HOD's Desk</a></li>
+                            <li>
+                                <a href="./gallery.html">Gallery</a>
+                            </li>
+                            <li><a href="#">Events</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" style="color: black; font-weight: bold">People</a><i
+                            class="fa-solid fa-chevron-down"></i>
+                        <ul>
+                            <li><a href="./faculty.html">Faculty</a></li>
+                            <li>
+                                <a href="#">Students</a>
+                                <ul>
+                                    <li><a href="./UG.html">UG (BsMs)</a></li>
+                                    <li><a href="./PG.html">PG (M.Sc. & PhD)</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="staff.html">Staff</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" style="color: black; font-weight: bold">Research</a><i
+                            class="fa-solid fa-chevron-down"></i>
+                        <ul>
+                            <li>
+                                <a href="#">Overview</a>
+                                <ul>
+                                    <li>
+                                        <a href="./Bioorganic.html">Bioorganic Chemistry and Chemical Biology</a>
+                                    </li>
+                                    <li>
+                                        <a href="./Organometallics.html">Organometallics and Catalysis</a>
+                                    </li>
+                                    <li><a href="./Organic.html">Organic Chemistry</a></li>
+                                    <li>
+                                        <a href="./Theoretical.html">Theoretical and Computational Chemistry</a>
+                                    </li>
+                                    <li>
+                                        <a href="./Pi-conjugated.html">Pi-conjugated Organic chemistry
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./publication.html">Publication</a>
+                            </li>
+                            <li>
+                                <a href="">Projects</a>
+                            </li>
+                            <li>
+                                <a href="#">Facilities</a>
+                                <ul>
+                                    <li><a href="./DCIF.html">DCIF</a></li>
+                                    <li><a href="./SCIF.html">SCIF</a></li>
+                                    <li><a href="./HPC.html">HPC</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" style="color: black; font-weight: bold">Academics</a><i
+                            class="fa-solid fa-chevron-down"></i>
+                        <ul>
+                            <li><a href="./undergraduate.html">Undergraduate</a></li>
+                            <li><a href="./postgraduate.html">Postgratuate</a></li>
+                            <li><a href="#">Doctoral</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" style="color: black; font-weight: bold">Join Us</a><i
+                            class="fa-solid fa-chevron-down"></i>
+                        <ul>
+                            <li><a href="#">Faculty Recruitments</a></li>
+                            <li><a href="#">Postdoc Openings</a></li>
+                            <li><a href="#">Admissions</a></li>
+                            <li><a href="#">Internships/Project Staff</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Highlights -->
+        <!-- <section id="highlights" class="wrapper style3">
+            <div class="title" style="color: black">
+                Bioorganic Chemistry and Chemical Biology
+            </div>
+        </section> -->
+        <!-- Publications -->
+        <section id="publications" class="wrapper style3" style="padding-top: 30px;">
+
+            <div class="title" style="color: black;">
+                Publications
+            </div>
+
+            <div class="publications-container">
+
+
+                <!-- =========================
+                     2025
+                ========================== -->
+
+                <div class="publication-year">
+                    <span>2025</span>
+                </div>
+
+                <div class="publication-grid">
+
+
+                    <!-- Publication 1 -->
+
+                    <article class="publication-card">
+
+                        <div class="publication-image">
+                            <img src="images/Publication/pub1.jpg" alt="Unprecedented photochromism" />
+                        </div>
+
+                        <div class="publication-content">
+
+                            <h3>
+                                Unprecedented photochromism of
+                                ferrocene-aryl dicyanovinylenes
+                            </h3>
+
+                            <p>
+                                Ferrocene-based dicyanovinylene systems
+                                exhibiting reversible photochromism and
+                                photoinduced fluorescence.
+                            </p>
+
+                            <div class="publication-doi">
+                                <strong>DOI:</strong>
+                                <a href="https://doi.org/10.1039/D5DT00742A" target="_blank">
+                                    10.1039/D5DT00742A
+                                </a>
+                            </div>
+
+                            <a href="https://doi.org/10.1039/D5DT00742A" target="_blank" class="publication-button">
+                                View Publication
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Publication 2 -->
+
+                    <article class="publication-card">
+
+                        <div class="publication-image">
+                            <img src="images/Publication/pub2.jpeg" alt="Alpha Beta Diarylation" />
+                        </div>
+
+                        <div class="publication-content">
+
+                            <h3>
+                                α,β-Diarylation on β-Diketo-BF₂ Complexes:
+                                Strong Intrinsic Aggregation-Induced Emission
+                                and Organic Self-Recovering Electrochromism
+                            </h3>
+
+                            <p>
+                                BF₂ complexes showing strong aggregation-induced
+                                emission together with reversible electrochromic
+                                behaviour.
+                            </p>
+
+                            <div class="publication-doi">
+                                <strong>DOI:</strong>
+                                <a href="https://doi.org/10.1021/acs.joc.5c00825" target="_blank">
+                                    10.1021/acs.joc.5c00825
+                                </a>
+                            </div>
+
+                            <a href="https://doi.org/10.1021/acs.joc.5c00825" target="_blank"
+                                class="publication-button">
+                                View Publication
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Publication 3 -->
+
+                    <article class="publication-card">
+
+                        <div class="publication-image">
+                            <img src="images/Publication/pub3.jpg" alt="Structure Property Evaluation" />
+                        </div>
+
+                        <div class="publication-content">
+
+                            <h3>
+                                Structure-Property Evaluation of
+                                Knoevenagel-Derived π-Conjugated
+                                Organic Systems
+                            </h3>
+
+                            <p>
+                                A review of π-conjugated systems, their synthesis,
+                                optoelectronic properties, and emerging applications.
+                            </p>
+
+                            <div class="publication-doi">
+                                <strong>DOI:</strong>
+                                <a href="https://doi.org/10.1002/ejoc.202401367" target="_blank">
+                                    10.1002/ejoc.202401367
+                                </a>
+                            </div>
+
+                            <a href="https://doi.org/10.1002/ejoc.202401367" target="_blank" class="publication-button">
+                                View Publication
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <!-- =========================
+                     2024
+                ========================== -->
+
+                <div class="publication-year">
+                    <span>2024</span>
+                </div>
+
+                <div class="publication-grid">
+
+                    <!-- Add 2024 publications here -->
+
+                </div>
+
+
+                <!-- =========================
+                     2023
+                ========================== -->
+
+                <div class="publication-year">
+                    <span>2023</span>
+                </div>
+
+                <div class="publication-grid">
+
+                    <!-- Add 2023 publications here -->
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <section id="footer" class="wrapper" style="padding-bottom: 0px; padding-top: 0px">
+            <div class="title">Contact us</div>
+            <div class="container">
+                <header class="style1" style="padding-bottom: 56px; margin-bottom: 56px">
+                    <h2>Department of Chemistry</h2>
+                    <p>
+                        Indian Institute of Technology Dharwad<br />
+                        Permanent Campus, Chikkamalligawad, Dharwad - 580011, India
+                    </p>
+                </header>
+                <div class="row gtr-50">
+                    <div class="col-12">
+                        <!-- Contact -->
+                        <section class="feature-list small">
+                            <div class="row">
+                                <div class="col-3 col-12-medium">
+                                    <section>
+                                        <h3 class="icon solid fa-home">Mailing Address</h3>
+                                        <p>
+                                            IIT Dharwad, Academic Block-II<br />
+                                            Permanent Campus, Chikkamalligawad, Dharwad - 580011,
+                                            India<br />
+                                        </p>
+                                    </section>
+                                </div>
+                                <div class="col-3 col-12-medium">
+                                    <section>
+                                        <h3 class="icon solid fa-comment">Social</h3>
+                                        <p>
+                                            <a href="#">@untitled-corp</a><br />
+                                            <a href="#">linkedin.com/untitled</a><br />
+                                            <a href="#">facebook.com/untitled</a>
+                                        </p>
+                                    </section>
+                                </div>
+                                <div class="col-3 col-12-medium" style="padding-top: 0px">
+                                    <section>
+                                        <h3 class="icon solid fa-envelope">Email & Phone No.</h3>
+                                        <p>
+                                            <a href="#">chemistry.office@iitdh.ac.in</a>
+                                        </p>
+                                    </section>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div id="copyright" style="padding-top: 56px; margin-top: 56px"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

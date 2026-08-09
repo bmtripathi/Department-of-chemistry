@@ -5,303 +5,290 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-  <head>
-    <title>HOD Desk</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-      .curriculum-card {
-        background: #fff;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-        margin: 40px auto;
-        max-width: 1100px;
-      }
 
-      .curriculum-header {
-        background: linear-gradient(135deg, #7b2ff7, #5b18d6);
+<head>
+  <title>HOD Desk</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .curriculum-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      margin: 40px auto;
+      max-width: 1100px;
+    }
 
-        color: white;
+    .curriculum-header {
+      background: linear-gradient(135deg, #7b2ff7, #5b18d6);
 
-        font-size: 36px;
+      color: white;
 
-        font-weight: 700;
+      font-size: 36px;
 
-        text-align: center;
+      font-weight: 700;
 
-        padding: 30px;
-      }
+      text-align: center;
 
-      .semester-tabs {
-        display: flex;
+      padding: 30px;
+    }
 
-        justify-content: space-between;
+    .semester-tabs {
+      display: flex;
 
-        background: #24364c;
+      justify-content: space-between;
 
-        padding: 0;
-      }
+      background: #24364c;
 
-      .semester-tabs button {
-        flex: 1;
-        min-width: 120px;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+      padding: 0;
+    }
 
-        border: none;
-        background: none;
-        color: #fff;
-        font-size: 17px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        padding: 18px 15px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
+    .semester-tabs button {
+      flex: 1;
+      min-width: 120px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
-      .semester-tabs button:hover {
-        background: #324963;
-      }
+      border: none;
+      background: none;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 18px 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-      .semester-tabs .active {
-        background: #324963;
-      }
+    .semester-tabs button:hover {
+      background: #324963;
+    }
 
-      .curriculum-content {
-        display: grid;
+    .semester-tabs .active {
+      background: #324963;
+    }
 
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    .curriculum-content {
+      display: grid;
 
-        gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 
-        padding: 35px;
-      }
+      gap: 25px;
 
-      .pdf-card {
-        text-decoration: none;
+      padding: 35px;
+    }
 
-        background: #fff;
+    .pdf-card {
+      text-decoration: none;
 
-        border-radius: 12px;
+      background: #fff;
 
-        padding: 25px;
+      border-radius: 12px;
 
-        text-align: center;
+      padding: 25px;
 
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      text-align: center;
 
-        transition: 0.3s;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 
-        color: #333;
-      }
+      transition: 0.3s;
 
-      .pdf-card:hover {
-        transform: translateY(-6px);
-      }
+      color: #333;
+    }
 
-      .pdf-card i {
-        color: #d32f2f;
+    .pdf-card:hover {
+      transform: translateY(-6px);
+    }
 
-        font-size: 42px;
+    .pdf-card i {
+      color: #d32f2f;
 
-        margin-bottom: 10px;
-      }
+      font-size: 42px;
 
-      .pdf-card span {
-        display: block;
+      margin-bottom: 10px;
+    }
 
-        font-weight: 600;
+    .pdf-card span {
+      display: block;
 
-        font-size: 18px;
-      }
-      nav {
-        background-color: white;
-      }
-      nav a {
-        padding-top: -10px;
-        padding-bottom: -10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border-radius: 10px;
-        background-color: white;
-        color: black;
-        font-size: 16px;
-        /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
-      }
-      #nav > ul > li > a {
-        font-size: 1em;
-      }
-      #nav > ul > li > i {
-        color: black;
-      }
-      #nav > ul > li {
-        text-align: center;
-        padding: 0 2em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 1em;
-      }
-      #footer .feature-list .row {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
+      font-weight: 600;
 
-#footer .feature-list .row > div {
-    width: 24%;
-    flex: 0 0 24%;
-}
+      font-size: 18px;
+    }
 
-#footer .feature-list section {
-    margin-bottom: 0;
-}
-    </style>
-  </head>
+    nav {
+      background-color: white;
+    }
 
-  <body class="no-sidebar is-preload">
-    <div id="page-wrapper">
-      <!-- Header -->
-      <!-- <section id="header" class="wrapper"> -->
-        <!-- <div id="logo">
+    nav a {
+      padding-top: -10px;
+      padding-bottom: -10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      background-color: white;
+      color: black;
+      font-size: 16px;
+      /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
+    }
+
+    #nav>ul>li>a {
+      font-size: 1em;
+    }
+
+    #nav>ul>li>i {
+      color: black;
+    }
+
+    #nav>ul>li {
+      text-align: center;
+      padding: 0 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1em;
+    }
+
+    #footer .feature-list .row {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    #footer .feature-list .row>div {
+      width: 24%;
+      flex: 0 0 24%;
+    }
+
+    #footer .feature-list section {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body class="no-sidebar is-preload">
+  <div id="page-wrapper">
+    <!-- Header -->
+    <!-- <section id="header" class="wrapper"> -->
+    <!-- <div id="logo">
           <h1><a href="index.html">Bs-Ms Major in Chemistry</a></h1>
         </div> -->
 
-        <!-- Nav -->
-        <nav
-          id="nav"
-          style="top: 1px; position: fixed; top: 0; width: 100%; z-index: 1000"
-        >
-          <ul
-            style="
+    <!-- Nav -->
+    <nav id="nav" style="top: 1px; position: fixed; top: 0; width: 100%; z-index: 1000">
+      <ul style="
               display: flex;
               align-items: center;
               justify-content: center;
               margin: 0;
               padding: 0;
               list-style: none;
-            "
-          >
-            <li
-              style="
+            ">
+        <li style="
                 color: black;
                 font-weight: bold;
                 font-size: 2em;
                 margin-right: 160px;
                 padding: 0 0;
-              "
-            >
-              Department of Chemistry
-            </li>
-            <li class="current">
-              <a href="./index.html" style="color: black; font-weight: bold"
-                >Home</a
-              >
-            </li>
+              ">
+          Department of Chemistry
+        </li>
+        <li class="current">
+          <a href="./index.html" style="color: black; font-weight: bold">Home</a>
+        </li>
+        <li>
+          <a href="#" style="color: black; font-weight: bold">About Us</a><i class="fa-solid fa-chevron-down"></i>
+          <ul>
+            <li><a href="hod.html">From HOD's Desk</a></li>
             <li>
-              <a href="#" style="color: black; font-weight: bold">About Us</a
-              ><i class="fa-solid fa-chevron-down"></i>
+              <a href="./gallery.html">Gallery</a>
+            </li>
+            <li><a href="#">Events</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" style="color: black; font-weight: bold">People</a><i class="fa-solid fa-chevron-down"></i>
+          <ul>
+            <li><a href="./faculty.html">Faculty</a></li>
+            <li>
+              <a href="#">Students</a>
               <ul>
-                <li><a href="hod.html">From HOD's Desk</a></li>
-                <li>
-                  <a href="./gallery.html">Gallery</a>
-                </li>
-                <li><a href="#">Events</a></li>
+                <li><a href="./UG.html">UG (BsMs)</a></li>
+                <li><a href="./PG.html">PG (M.Sc. & PhD)</a></li>
               </ul>
             </li>
-            <li>
-              <a href="#" style="color: black; font-weight: bold">People</a
-              ><i class="fa-solid fa-chevron-down"></i>
-              <ul>
-                <li><a href="./faculty.html">Faculty</a></li>
-                <li>
-                  <a href="#">Students</a>
-                  <ul>
-                    <li><a href="./UG.html">UG (BsMs)</a></li>
-                    <li><a href="./PG.html">PG (M.Sc. & PhD)</a></li>
-                  </ul>
-                </li>
 
-                <li><a href="./staff.html">Staff</a></li>
+            <li><a href="./staff.html">Staff</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" style="color: black; font-weight: bold">Research</a><i class="fa-solid fa-chevron-down"></i>
+          <ul>
+            <li>
+              <a href="#">Overview</a>
+              <ul>
+                <li><a href="./Bioorganic.html">Bioorganic Chemistry and Chemical Biology</a></li>
+                <li><a href="./Organometallics.html">Organometallics and Catalysis</a></li>
+                <li><a href="./Organic.html">Organic Chemistry</a></li>
+                <li><a href="./Theoretical.html">Theoretical and Computational Chemistry</a></li>
+                <li><a href="./Pi-conjugated.html">Pi-conjugated Organic chemistry </a></li>
               </ul>
             </li>
             <li>
-              <a href="#" style="color: black; font-weight: bold">Research</a
-              ><i class="fa-solid fa-chevron-down"></i>
-              <ul>
-                <li>
-                  <a href="#">Overview</a>
-                  <ul>
-                    <li><a href="./Bioorganic.html">Bioorganic Chemistry and Chemical Biology</a></li>
-                    <li><a href="./Organometallics.html">Organometallics and Catalysis</a></li>
-                    <li><a href="./Organic.html">Organic Chemistry</a></li>
-                    <li><a href="./Theoretical.html">Theoretical and Computational Chemistry</a></li>
-                    <li><a href="./Pi-conjugated.html">Pi-conjugated Organic chemistry </a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Publication</a>
-                </li>
-                <li>
-                  <a href="">Projects</a>
-                </li>
-                <li>
-                  <a href="#">Facilities</a>
-                  <ul>
-                    <li><a href="./DCIF.html">DCIF</a></li>
-                    <li><a href="./SCIF.html">SCIF</a></li>
-                    <li><a href="./HPC.html">HPC</a></li>
-                  </ul>
-                </li>
-              </ul>
+              <a href="./publication.html">Publication</a>
             </li>
             <li>
-              <a href="#" style="color: black; font-weight: bold">Academics</a
-              ><i class="fa-solid fa-chevron-down"></i>
-              <ul>
-                <li><a href="undergraduate.html">Undergraduate</a></li>
-                <li><a href="./postgraduate.html">Postgratuate</a></li>
-                <li><a href="#">Doctoral</a></li>
-              </ul>
+              <a href="">Projects</a>
             </li>
             <li>
-              <a href="#" style="color: black; font-weight: bold">Join Us</a
-              ><i class="fa-solid fa-chevron-down"></i>
+              <a href="#">Facilities</a>
               <ul>
-                <li><a href="#">Faculty Recruitments</a></li>
-                <li><a href="#">Postdoc Openings</a></li>
-                <li><a href="#">Admissions</a></li>
-                <li><a href="#">Internships/Project Staff</a></li>
+                <li><a href="./DCIF.html">DCIF</a></li>
+                <li><a href="./SCIF.html">SCIF</a></li>
+                <li><a href="./HPC.html">HPC</a></li>
               </ul>
             </li>
           </ul>
-        </nav>
-      </section>
+        </li>
+        <li>
+          <a href="#" style="color: black; font-weight: bold">Academics</a><i class="fa-solid fa-chevron-down"></i>
+          <ul>
+            <li><a href="undergraduate.html">Undergraduate</a></li>
+            <li><a href="./postgraduate.html">Postgratuate</a></li>
+            <li><a href="#">Doctoral</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" style="color: black; font-weight: bold">Join Us</a><i class="fa-solid fa-chevron-down"></i>
+          <ul>
+            <li><a href="#">Faculty Recruitments</a></li>
+            <li><a href="#">Postdoc Openings</a></li>
+            <li><a href="#">Admissions</a></li>
+            <li><a href="#">Internships/Project Staff</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </section>
 
-      <!-- Main -->
-      <div id="main" class="wrapper style2">
-        <div class="title">BS-MS Major in Chemistry</div>
-        <div class="container">
-          <!-- Content -->
-          <div id="content">
-            <div class="curriculum-card">
-              <div class="curriculum-header">
-                 MSc in Chemistry Curriculum
-              </div>
+    <!-- Main -->
+    <div id="main" class="wrapper style2">
+      <div class="title">BS-MS Major in Chemistry</div>
+      <div class="container">
+        <!-- Content -->
+        <div id="content">
+          <div class="curriculum-card">
+            <div class="curriculum-header">
+              MSc in Chemistry Curriculum
+            </div>
 
-              <!-- <div class="semester-tabs">
+            <!-- <div class="semester-tabs">
                 <button class="active">I SEM</button>
                 <button>II SEM</button>
                 <button>III SEM</button>
@@ -312,21 +299,21 @@
                 <button>VIII SEM</button>
               </div> -->
 
-              <div class="curriculum-content">
-                <a href="./curriculum/M.Sc Chemistry.pdf" target="_blank" class="pdf-card">
-                  <i class="fas fa-file-pdf"></i>
-                  <span>curriculum</span>
-                </a>
+            <div class="curriculum-content">
+              <a href="./curriculum/M.Sc Chemistry.pdf" target="_blank" class="pdf-card">
+                <i class="fas fa-file-pdf"></i>
+                <span>curriculum</span>
+              </a>
 
-                
-              </div>
+
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Highlights -->
-      <!-- <section id="highlights" class="wrapper style3">
+    <!-- Highlights -->
+    <!-- <section id="highlights" class="wrapper style3">
             <div class="title">The Endorsements</div>
             <div class="container">
                 <div class="row aln-center">
@@ -367,74 +354,68 @@
             </div>
         </section> -->
 
-      <!-- Footer -->
-      <section
-        id="footer"
-        class="wrapper"
-        style="padding-bottom: 0px; padding-top: 0px"
-      >
-        <div class="title">Contact us</div>
-        <div class="container">
-          <header
-            class="style1"
-            style="padding-bottom: 56px; margin-bottom: 56px"
-          >
-            <h2>Department of Chemistry</h2>
-            <p>
-              Indian Institute of Technology Dharwad<br />
-              Permanent Campus, Chikkamalligawad, Dharwad - 580011, India
-            </p>
-          </header>
-          <div class="row gtr-50">
-            <div class="col-12">
-              <!-- Contact -->
-              <section class="feature-list small">
-                <div class="row">
-                  <div class="col-3 col-12-medium">
-                    <section>
-                      <h3 class="icon solid fa-home">Mailing Address</h3>
-                      <p>
-                        IIT Dharwad, Academic Block-II<br />
-                        Permanent Campus, Chikkamalligawad, Dharwad - 580011,
-                        India<br />
-                      </p>
-                    </section>
-                  </div>
-                  <div class="col-3 col-12-medium">
-                    <section>
-                      <h3 class="icon solid fa-comment">Social</h3>
-                      <p>
-                        <a href="#">@untitled-corp</a><br />
-                        <a href="#">linkedin.com/untitled</a><br />
-                        <a href="#">facebook.com/untitled</a>
-                      </p>
-                    </section>
-                  </div>
-                  <div class="col-3 col-12-medium" style="padding-top: 0px;">
-                    <section>
-                      <h3 class="icon solid fa-envelope">Email & Phone No.</h3>
-                      <p>
-                        <a href="#">chemistry.office@iitdh.ac.in</a>
-                      </p>
-                    </section>
-                  </div>
+    <!-- Footer -->
+    <section id="footer" class="wrapper" style="padding-bottom: 0px; padding-top: 0px">
+      <div class="title">Contact us</div>
+      <div class="container">
+        <header class="style1" style="padding-bottom: 56px; margin-bottom: 56px">
+          <h2>Department of Chemistry</h2>
+          <p>
+            Indian Institute of Technology Dharwad<br />
+            Permanent Campus, Chikkamalligawad, Dharwad - 580011, India
+          </p>
+        </header>
+        <div class="row gtr-50">
+          <div class="col-12">
+            <!-- Contact -->
+            <section class="feature-list small">
+              <div class="row">
+                <div class="col-3 col-12-medium">
+                  <section>
+                    <h3 class="icon solid fa-home">Mailing Address</h3>
+                    <p>
+                      IIT Dharwad, Academic Block-II<br />
+                      Permanent Campus, Chikkamalligawad, Dharwad - 580011,
+                      India<br />
+                    </p>
+                  </section>
                 </div>
-              </section>
-            </div>
-          </div>
-          <div id="copyright" style="padding-top: 56px; margin-top: 56px">
-            
+                <div class="col-3 col-12-medium">
+                  <section>
+                    <h3 class="icon solid fa-comment">Social</h3>
+                    <p>
+                      <a href="#">@untitled-corp</a><br />
+                      <a href="#">linkedin.com/untitled</a><br />
+                      <a href="#">facebook.com/untitled</a>
+                    </p>
+                  </section>
+                </div>
+                <div class="col-3 col-12-medium" style="padding-top: 0px;">
+                  <section>
+                    <h3 class="icon solid fa-envelope">Email & Phone No.</h3>
+                    <p>
+                      <a href="#">chemistry.office@iitdh.ac.in</a>
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </section>
           </div>
         </div>
-      </section>
-    </div>
+        <div id="copyright" style="padding-top: 56px; margin-top: 56px">
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.dropotron.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
