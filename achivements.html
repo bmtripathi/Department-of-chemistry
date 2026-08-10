@@ -1,0 +1,797 @@
+<!doctype html>
+<!--
+	Escape Velocity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+  <title>HOD Desk</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* =========================
+   Main Navigation
+   ========================= */
+
+    .main-nav {
+      display: flex !important;
+      align-items: center;
+      justify-content: flex-start !important;
+      margin: 0 !important;
+      padding: 0 30px !important;
+      list-style: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* IIT Dharwad + Department of Chemistry */
+    .nav-brand {
+      display: flex !important;
+      align-items: center;
+      gap: 14px;
+      margin-right: 320px !important;
+      padding: 0 !important;
+      white-space: nowrap;
+    }
+
+    /* IIT Dharwad Logo */
+    .nav-brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Department Name */
+    .nav-brand span {
+      color: black;
+      font-size: 1.4em !important;
+      font-weight: 700;
+      line-height: 2;
+    }
+
+    /* Navigation links */
+    .main-nav>li:not(.nav-brand) {
+      padding: 0 15px !important;
+      margin-left: 5px;
+    }
+
+    .main-nav>li:not(.nav-brand)>a {
+      font-size: 1em;
+      font-weight: bold;
+      color: black;
+    }
+
+    /* =========================
+   Responsive
+   ========================= */
+
+    @media screen and (max-width: 1200px) {
+
+      .main-nav {
+        padding: 0 20px !important;
+      }
+
+      .nav-brand span {
+        font-size: 1.6em;
+      }
+
+      .nav-brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .main-nav>li:not(.nav-brand) {
+        padding: 0 9px !important;
+      }
+    }
+
+    /* Tablet */
+    @media screen and (max-width: 1200px) {
+      .nav-brand {
+        margin-right: 40px !important;
+      }
+
+      .nav-brand img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .nav-brand span {
+        font-size: 1.5em;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 736px) {
+      .nav-brand {
+        margin-right: 0 !important;
+      }
+
+      .nav-brand img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .nav-brand span {
+        font-size: 1.2em;
+      }
+    }
+
+    #header {
+      height: 12em !important;
+    }
+
+    nav {
+      background-color: white;
+    }
+
+    /* Achievements Section */
+    #achievements {
+      padding: 60px 0;
+      background: #f7f7f7;
+    }
+
+    #achievements .achievement-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    #achievements .achievement-heading h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    #achievements .achievement-heading p {
+      font-size: 16px;
+      color: #777;
+    }
+
+    .achievement-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .achievement-card {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid #e5e5e5;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .achievement-card-image {
+      width: 100%;
+      height: 320px;
+      overflow: hidden;
+      background: #f5f5f5;
+    }
+
+    .achievement-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .achievement-card-content {
+      padding: 22px;
+    }
+
+    .achievement-candidate {
+      color: #e97770;
+      font-size: 15px;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+    }
+
+    .achievement-card-content h3 {
+      color: #333;
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 0 0 12px 0;
+    }
+
+    .achievement-card-content p {
+      color: #666;
+      font-size: 15px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* Tablet */
+    @media screen and (max-width: 980px) {
+      .achievement-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 600px) {
+      #achievements {
+        padding: 45px 20px;
+      }
+
+      .achievement-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .achievement-card-image {
+        height: 220px;
+      }
+    }
+
+    nav a {
+      padding-top: -10px;
+      padding-bottom: -10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      background-color: white;
+      color: black;
+      font-size: 16px;
+      /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); */
+    }
+
+    #nav>ul>li>a {
+      font-size: 1em;
+    }
+
+    #nav>ul>li>i {
+      color: black;
+    }
+
+    #nav>ul>li {
+      text-align: center;
+      padding: 0 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 1em;
+    }
+
+    #footer .feature-list .row {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    #footer .feature-list .row>div {
+      width: 24%;
+      flex: 0 0 24%;
+    }
+
+    #footer .feature-list section {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+
+<body class="no-sidebar is-preload">
+  <div id="page-wrapper">
+    <!-- Header -->
+    <section id="header" class="wrapper">
+      <div id="logo">
+        <!-- <h1><a href="index.html">From HOD Desk</a></h1> -->
+      </div>
+
+      <!-- Nav -->
+      <nav id="nav" style="top: 1px; position: fixed; top: 0; width: 100%; z-index: 1000">
+        <ul class="main-nav">
+          <li class="nav-brand">
+            <img src="./images/logo.png" alt="IIT Dharwad Logo">
+            <span style="color: black;">Department of Chemistry</span>
+          </li>
+          <li class="current">
+            <a href="./index.html" style="color: black; font-weight: bold">Home</a>
+          </li>
+          <li>
+            <a href="#" style="color: black; font-weight: bold">About Us</a><i class="fa-solid fa-chevron-down"></i>
+            <ul>
+              <li><a href="./achivements.html">Achivements</a></li>
+              <li>
+                <a href="./gallery.html">Gallery</a>
+              </li>
+              <!-- <li><a href="#">Events</a></li> -->
+            </ul>
+          </li>
+          <li>
+            <a href="#" style="color: black; font-weight: bold">People</a><i class="fa-solid fa-chevron-down"></i>
+            <ul>
+              <li><a href="./faculty.html">Faculty</a></li>
+              <li>
+                <a href="#">Students</a>
+                <ul>
+                  <li><a href="./UG.html">UG (BsMs)</a></li>
+                  <li><a href="./PG.html">PG (M.Sc. & PhD)</a></li>
+                </ul>
+              </li>
+
+              <li><a href="./staff.html">Staff</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" style="color: black; font-weight: bold">Research</a><i class="fa-solid fa-chevron-down"></i>
+            <ul>
+              <li>
+                <a href="#">Overview</a>
+                <ul>
+                  <li><a href="./Bioorganic.html">Bioorganic Chemistry and Chemical Biology</a></li>
+                  <li><a href="./Organometallics.html">Organometallics and Catalysis</a></li>
+                  <li><a href="./Organic.html">Organic Chemistry</a></li>
+                  <li><a href="./Theoretical.html">Theoretical and Computational Chemistry</a></li>
+                  <li><a href="./Pi-conjugated.html">Pi-conjugated Organic chemistry </a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="./publication.html">Publication</a>
+              </li>
+              <li>
+                <a href="./projects.html">Projects</a>
+              </li>
+              <li>
+                <a href="#">Facilities</a>
+                <ul>
+                  <li><a href="./DCIF.html">DCIF</a></li>
+                  <li><a href="./SCIF.html">SCIF</a></li>
+                  <li><a href="./HPC.html">HPC</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" style="color: black; font-weight: bold">Academics</a><i class="fa-solid fa-chevron-down"></i>
+            <ul>
+              <li><a href="./undergraduate.html">Undergraduate</a></li>
+              <li><a href="./postgraduate.html">Postgratuate</a></li>
+              <li><a href="#">Doctoral</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" style="color: black; font-weight: bold">Join Us</a><i class="fa-solid fa-chevron-down"></i>
+            <ul>
+              <li><a href="#">Faculty Recruitments</a></li>
+              <li><a href="#">Postdoc Openings</a></li>
+              <li><a href="#">Admissions</a></li>
+              <li><a href="#">Internships/Project Staff</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- Main -->
+    <div id="main" class="wrapper style2">
+      <div class="title">HOD Desk</div>
+      <div class="container">
+        <!-- Content -->
+        <div id="content">
+          <article class="box post">
+            <img src="./images/NM.jpeg" alt="" width="300" height="200" style="
+                  border-radius: 5%;
+                  border: 2px solid #e97770;
+                  margin-top: 10px;
+                  margin-right: 20px;
+                  margin-bottom: 10px;
+                  float: left;
+                " />
+            <p style="font-size: 20px ;  color: black;">
+              The Department of Chemistry at IIT Dharwad is committed to fostering excellence in education, research,
+              and innovation.
+              We strive to provide our students with a strong foundation in chemical sciences while encouraging
+              curiosity, critical
+              thinking, and interdisciplinary learning. Our faculty and researchers are engaged in diverse areas of
+              modern chemistry,
+              creating an intellectually stimulating environment that promotes meaningful scientific contributions. <br>
+
+              The department also emphasizes research-driven learning, collaboration, and the development of solutions
+              to contemporary
+              scientific and societal challenges. Through dedicated teaching, active research, and a vibrant academic
+              community, we
+              aim to nurture the next generation of scientists and researchers and contribute to the advancement of
+              chemistry at both
+              national and international levels.
+            </p>
+          </article>
+          <!-- Achievements -->
+          <!-- Achievements -->
+          <section id="achievements" class="wrapper style3" style="padding-top: 0px;">
+
+            <div class="container">
+
+              <div class="achievement-heading">
+                <h2>Achievements</h2>
+                <p>Recognizing excellence and outstanding accomplishments</p>
+              </div>
+
+              <div class="achievement-grid">
+
+                <!-- Achievement Card 1 -->
+                <div class="achievement-card">
+
+                  <div class="achievement-card-image">
+                    <img src="./images/achivements/RAHUL BANGARI.jpg" alt="Achievement">
+                  </div>
+
+                  <div class="achievement-card-content">
+
+                    <p class="achievement-candidate" style="color: #e97770;">
+                      Rahul Bangari
+                    </p>
+
+                    <h3>
+                      Best Poster Award at the International Conference on Fundamental and Advanced Research in
+                      Chemistry FARC-2026
+                    </h3>
+
+                    <p>
+                      Rahul Bangari, PhD scholar in the department of Chemistry IIT Dharwad under the superivision of
+                      Dr. Supriya Rej have
+                      been awarded with best poster award at International Conference on
+                      Fundamental and Advanced Research in Chemistry
+                      FARC-2026 (8-10 June, 2026) organised by
+                      Indian Institute of Technology Mandi, H.P., India.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <!-- Achievement Card 2 -->
+                <div class="achievement-card">
+
+                  <div class="achievement-card-image">
+                    <img src="./images/achivements/Simita Das1.jpg" alt="Achievement">
+                  </div>
+
+                  <div class="achievement-card-content">
+
+                    <p class="achievement-candidate" style="color: #e97770;">
+                      Simita Das
+                    </p>
+
+                    <h3>
+                      "Best Poster" Award at the 34th CRSI National Symposium in Chemistry
+                    </h3>
+
+                    <p>
+                      The Chemical Research Society of India (CRSI) is a prestigious platform that brings together
+                      leading scientists,
+                      industrialists, researchers, and young scholars from across the world to share groundbreaking work
+                      in chemistry.
+
+                      Attending the symposium was an enriching experience, with insightful lectures and discussions
+                      covering diverse areas of
+                      chemistry. I’m truly honored to have my work recognized among such brilliant minds and research.
+
+                      A special thanks to the organizers at IISER Bhopal for hosting such a well-structured and vibrant
+                      symposium. A heartfelt
+                      thanks to my guide, Prof. Nilkamal Mahanta and Indian Institute of Technology Dharwad. Grateful
+                      for this recognition.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <!-- Achievement Card 3 -->
+                <div class="achievement-card">
+
+                  <div class="achievement-card-image">
+                    <img src="./images/achivements/Simita Das2.jpg" alt="Achievement">
+                  </div>
+
+                  <div class="achievement-card-content">
+
+                    <p class="achievement-candidate" style="color: #e97770;">
+                      Simita Das
+                    </p>
+
+                    <h3>
+                      "Best Poster Award" at the 35th CRSI National Symposium in Chemistry
+                    </h3>
+
+                    <p>
+                      A big thank you to the Chemical Research Society of India (CRSI) and ACS Publications for this
+                      recognition. I'm deeply
+                      grateful to my guide Prof. Nilkamal Mahanta, collaborator Prof Suvamay Jana, and the Department of
+                      Chemistry at IIT
+                      Dharwad.
+
+                      It was an incredible experience to interact with leading researchers and fellow students from
+                      across the country.
+                      Looking forward to more such enriching scientific exchanges!
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <!-- Achievement Card 4 -->
+                <div class="achievement-card">
+
+                  <div class="achievement-card-image">
+                    <img src="./images/achivements/Simita Das3.jpg" alt="Achievement">
+                  </div>
+
+                  <div class="achievement-card-content">
+
+                    <p class="achievement-candidate" style="color: #e97770;">
+                      Simita Das
+                    </p>
+
+                    <h3>
+                      "Best Oral Presentation" award at the Rasaayan Sangoshthi 2026
+                    </h3>
+
+                    <p>
+                      This national conference was held from 13th to 14th March 2026 at IIT Dharwad. Receiving this
+                      token from Prof. jayanta
+                      chatterjee (Associate Professor, Molecular Biophysics Unit, IISc Bangalore) was an absolute honor.
+
+                      My sincere thanks to my supervisor (Prof. Nilkamal Mahanta) and my collaborators (Prof. Suvamay
+                      Jana and Prof. Badri
+                      Nath Dubey) for their guidance.
+
+                      Also, grateful to the organizers, the respected invited speakers and professors, fellow
+                      participants and Department of
+                      Chemistry IITDh for making this conference such a meaningful experience.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <!-- Achievement Card 5 -->
+                <div class="achievement-card">
+
+                  <div class="achievement-card-image">
+                    <img src="./images/achivements/Dhwani Bhavesh Shah1.JPG" alt="Achievement">
+                  </div>
+
+                  <div class="achievement-card-content">
+
+                    <p class="achievement-candidate" style="color: #e97770;">
+                      Dhwani Shah
+                    </p>
+
+                    <h3>
+                      Poster presentation at 36th CRSI National Symposium in Chemistry
+                    </h3>
+
+                    <p>
+                      I have been awarded the Best Poster Prize at the 36th Chemical Research Society of India (CRSI)
+                      National Symposium in
+                      Chemistry held at Dibrugarh University, Assam, from 5th to 7th February. Competing among
+                      approximately 170 poster
+                      presentations, my work received notable recognition from the scientific community. I received the
+                      award along with a
+                      cash prize of ₹1000 from Prof. Uday Maitra, President of CRSI.
+                    </p>
+
+                  </div>
+
+                </div>
+
+
+                <!-- Achievement Card 6 -->
+                <div class="achievement-card">
+
+                  <div class="achievement-card-image">
+                    <img src="./images/achivements/Dhwani Bhavesh Shah2.JPG" alt="Achievement">
+                  </div>
+
+                  <div class="achievement-card-content">
+
+                    <p class="achievement-candidate" style="color: #e97770;">
+                      Dhwani Shah
+                    </p>
+
+                    <h3>
+                      Best poster award at Next-Gen Functional Materials, National Symposium
+                    </h3>
+
+                    <p>
+                      I received the Poster Award at the Anusandhan National Research Foundation (ANRF) Sponsored
+                      National Symposium on
+                      Next-Gen Functional Materials organized by the Department of Chemistry, IIT Dharwad (Oct 31-Nov 1,
+                      2025)
+                    </p>
+
+                  </div>
+
+                </div>
+                <div class="achievement-card">
+
+                  <div class="achievement-card-image">
+                    <img src="./images/achivements/Dhwani Bhavesh Shah3.JPG" alt="Achievement">
+                  </div>
+
+                  <div class="achievement-card-content">
+
+                    <p class="achievement-candidate" style="color: #e97770;">
+                      Dhwani Shah
+                    </p>
+
+                    <h3>
+                      I received the Best Poster Presentation Award at the 44th Annual National Conference of the Indian
+                      Council of Chemists
+                    </h3>
+
+                    <p>
+                      I received the Best Poster Presentation Award at the 44th Annual National Conference of the Indian
+                      Council of Chemists,
+                      held from 22-24 December 2025 at KLE Technological University - Hubballi (India). The award,
+                      sponsored by Chemical
+                      Engineering Journal (Elsevier), included a cash prize of ₹1,000 and recognises the rigorous
+                      research effort, critical
+                      thinking, and perseverance reflected in the presented work.
+                    </p>
+
+                  </div>
+
+                </div>
+                <div class="achievement-card">
+
+                  <div class="achievement-card-image">
+                    <img src="./images/achivements/Dhwani Bhavesh Shah4.jpg" alt="Achievement">
+                  </div>
+
+                  <div class="achievement-card-content">
+
+                    <p class="achievement-candidate" style="color: #e97770;">
+                      Dhwani Shah
+                    </p>
+
+                    <h3>
+                      Best Poster Award at SPECTROMICS 2026 - Spectrometry-Integrated Omics in Health & Disease
+                    </h3>
+
+                    <p>
+                      Honored and grateful to share that I received the Best Poster Award back-to-back for the third
+                      time at SPECTROMICS 2026
+                      - Spectrometry-Integrated Omics in Health & Disease, organized by IIT Dharwad on 16-17 January
+                      2026. This recognition
+                      means a lot and motivates me to keep pushing boundaries in research and scientific communication.
+                      Grateful for the
+                      support, guidance, and inspiring discussions with mentors, colleagues, and fellow researchers.
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- Highlights -->
+    <!-- <section id="highlights" class="wrapper style3">
+            <div class="title">The Endorsements</div>
+            <div class="container">
+                <div class="row aln-center">
+                    <div class="col-4 col-12-medium">
+                        <section class="highlight">
+                            <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
+                            <h3><a href="#">Aliquam diam consequat</a></h3>
+                            <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet
+                                vulputate mattis amet laoreet lorem.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button style1">Learn More</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <section class="highlight">
+                            <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
+                            <h3><a href="#">Nisl adipiscing sed lorem</a></h3>
+                            <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet
+                                vulputate mattis amet laoreet lorem.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button style1">Learn More</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                    <div class="col-4 col-12-medium">
+                        <section class="highlight">
+                            <a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
+                            <h3><a href="#">Mattis tempus lorem</a></h3>
+                            <p>Eget mattis at, laoreet vel amet sed velit aliquam diam ante, dolor aliquet sit amet
+                                vulputate mattis amet laoreet lorem.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button style1">Learn More</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+    <!-- Footer -->
+    <section id="footer" class="wrapper" style="padding-bottom: 0px; padding-top: 0px">
+      <div class="title">Contact us</div>
+      <div class="container">
+        <header class="style1" style="padding-bottom: 56px; margin-bottom: 56px">
+          <h2>Department of Chemistry</h2>
+          <p>
+            Indian Institute of Technology Dharwad<br />
+            Permanent Campus, Chikkamalligawad, Dharwad - 580011, India
+          </p>
+        </header>
+        <div class="row gtr-50">
+          <div class="col-12">
+            <!-- Contact -->
+            <section class="feature-list small">
+              <div class="row">
+                <div class="col-3 col-12-medium">
+                  <section>
+                    <h3 class="icon solid fa-home">Mailing Address</h3>
+                    <p>
+                      Academic Block-II, Permanent Campus<br />
+                      IIT Dharwad, Chikkamalligawad, Dharwad - 580011,
+                      India<br />
+                    </p>
+                  </section>
+                </div>
+                <div class="col-3 col-12-medium">
+                  <section>
+                    <h3 class="icon solid fa-comment">Contact here...</h3>
+                    <p>
+                      chemistry.office@iitdh.ac.in <br>
+                      +91-9044682339 <br>
+                      +91-9580178931
+                    </p>
+                  </section>
+                </div>
+                <div class="col-3 col-12-medium" style="padding-top: 0px;">
+                  <section>
+                    <h3 class="icon solid fa-envelope">Designed by : </h3>
+                    <p>
+                    <p>B.M.Tripathi, under guidance of Prof. Anmol & Prof. Nilkamal</p>
+                    </p>
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div id="copyright" style="padding-top: 56px; margin-top: 56px"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.dropotron.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

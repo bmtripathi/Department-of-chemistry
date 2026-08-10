@@ -13,6 +13,115 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
+    /* =========================
+   Main Navigation
+   ========================= */
+
+    .main-nav {
+      display: flex !important;
+      align-items: center;
+      justify-content: flex-start !important;
+      margin: 0 !important;
+      padding: 0 30px !important;
+      list-style: none;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    /* IIT Dharwad + Department of Chemistry */
+    .nav-brand {
+      display: flex !important;
+      align-items: center;
+      gap: 14px;
+      margin-right: 320px !important;
+      padding: 0 !important;
+      white-space: nowrap;
+    }
+
+    /* IIT Dharwad Logo */
+    .nav-brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* Department Name */
+    .nav-brand span {
+      color: black;
+      font-size: 1.4em !important;
+      font-weight: 700;
+      line-height: 2;
+    }
+
+    /* Navigation links */
+    .main-nav>li:not(.nav-brand) {
+      padding: 0 15px !important;
+      margin-left: 5px;
+    }
+
+    .main-nav>li:not(.nav-brand)>a {
+      font-size: 1em;
+      font-weight: bold;
+      color: black;
+    }
+
+    /* =========================
+   Responsive
+   ========================= */
+
+    @media screen and (max-width: 1200px) {
+
+      .main-nav {
+        padding: 0 20px !important;
+      }
+
+      .nav-brand span {
+        font-size: 1.6em;
+      }
+
+      .nav-brand img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .main-nav>li:not(.nav-brand) {
+        padding: 0 9px !important;
+      }
+    }
+
+    /* Tablet */
+    @media screen and (max-width: 1200px) {
+      .nav-brand {
+        margin-right: 40px !important;
+      }
+
+      .nav-brand img {
+        width: 50px;
+        height: 50px;
+      }
+
+      .nav-brand span {
+        font-size: 1.5em;
+      }
+    }
+
+    /* Mobile */
+    @media screen and (max-width: 736px) {
+      .nav-brand {
+        margin-right: 0 !important;
+      }
+
+      .nav-brand img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .nav-brand span {
+        font-size: 1.2em;
+      }
+    }
+
     #header {
       height: 13em !important;
     }
@@ -159,22 +268,10 @@
 
       <!-- Nav -->
       <nav id="nav" style="top: 1px; position: fixed; top: 0; width: 100%; z-index: 1000">
-        <ul style="
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              margin: 0;
-              padding: 0;
-              list-style: none;
-            ">
-          <li style="
-                color: black;
-                font-weight: bold;
-                font-size: 2em;
-                margin-right: 160px;
-                padding: 0 0;
-              ">
-            Department of Chemistry
+        <ul class="main-nav">
+          <li class="nav-brand">
+            <img src="./images/logo.png" alt="IIT Dharwad Logo">
+            <span style="color: black;">Department of Chemistry</span>
           </li>
           <li class="current">
             <a href="./index.html" style="color: black; font-weight: bold">Home</a>
@@ -182,11 +279,11 @@
           <li>
             <a href="#" style="color: black; font-weight: bold">About Us</a><i class="fa-solid fa-chevron-down"></i>
             <ul>
-              <li><a href="./hod.html">From HOD's Desk</a></li>
+              <li><a href="./achivements.html">Achivements</a></li>
               <li>
                 <a href="./gallery.html">Gallery</a>
               </li>
-              <li><a href="#">Events</a></li>
+              <!-- <li><a href="#">Events</a></li> -->
             </ul>
           </li>
           <li>
@@ -230,7 +327,7 @@
                 <a href="./publication.html">Publication</a>
               </li>
               <li>
-                <a href="">Projects</a>
+                <a href="./projects.html">Projects</a>
               </li>
               <li>
                 <a href="#">Facilities</a>
@@ -348,27 +445,27 @@
                 <section>
                   <h3 class="icon solid fa-home">Mailing Address</h3>
                   <p>
-                    IIT Dharwad, Academic Block-II<br />
-                    Permanent Campus, Chikkamalligawad, Dharwad - 580011,
+                    Academic Block-II, Permanent Campus<br />
+                    IIT Dharwad, Chikkamalligawad, Dharwad - 580011,
                     India<br />
                   </p>
                 </section>
               </div>
               <div class="col-3 col-12-medium">
                 <section>
-                  <h3 class="icon solid fa-comment">Social</h3>
+                  <h3 class="icon solid fa-comment">Contact here...</h3>
                   <p>
-                    <a href="#">@untitled-corp</a><br />
-                    <a href="#">linkedin.com/untitled</a><br />
-                    <a href="#">facebook.com/untitled</a>
+                    chemistry.office@iitdh.ac.in <br>
+                    +91-9044682339 <br>
+                    +91-9580178931
                   </p>
                 </section>
               </div>
-              <div class="col-3 col-12-medium" style="padding-top: 0px">
+              <div class="col-3 col-12-medium" style="padding-top: 0px;">
                 <section>
-                  <h3 class="icon solid fa-envelope">Email & Phone No.</h3>
+                  <h3 class="icon solid fa-envelope">Designed by : </h3>
                   <p>
-                    <a href="#">chemistry.office@iitdh.ac.in</a>
+                  <p>B.M.Tripathi, under guidance of Prof. Anmol & Prof. Nilkamal</p>
                   </p>
                 </section>
               </div>
